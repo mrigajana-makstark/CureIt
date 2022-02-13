@@ -1,0 +1,47 @@
+TO ADD FILES INTO REPO:
+-git init (to initialise git)
+-git remote add origin 'paste the link' (to add the files to the repo)
+-git remote -v (to check whether we have access for push or pull)
+-git add . (upload all the files)
+-git add file1 file2 (upload a single file)
+-git commit -a -m "First Commit" (when the files are ready to be pushed into the repo)
+-git push origin main (it pushes the files into the repo)
+-git help (for checking the commands)
+-git log (details about the timing of the upload of files) 
+
+
+To delete a branch:
+-git branch #for listing all the branches
+*coder 
+master
+
+-git checkout master #to go to the master branch then delete coder branch
+switched to branch master
+
+-git branch -d coder #for deleting the branch(from local repository)
+deleted branch coder 
+
+-git push origin --delete coder (from remote repository i.e GitHub browser)
+
+TO LIST ALL BRANCHES ON A REPO:
+-git branch
+    OR
+-git branch --list
+
+CREATE A BRANCH:
+-git checkout stage #if we want to create a branch out of stage
+
+-git branch temp_stage
+
+MERGE BRANCHES:
+#two branches alpha and master
+-git checkout master #switch to master branch
+-git merge alpha #to merge with master
+- :q to quit
+-git push(on remote repo)
+ 
+
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
