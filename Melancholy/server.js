@@ -17,7 +17,7 @@ const io = socketio(server);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const botName = 'Melancholy Bot';
+const botName = 'CureIt Bot';
 
 io.on('connection', socket => {
 
@@ -27,7 +27,7 @@ io.on('connection', socket => {
         socket.join(user.room);
 
         // Welcome current user
-        socket.emit('message', formatMessage(botName, 'Welcome to Melancholy'));
+        socket.emit('message', formatMessage(botName, 'Welcome to Chat Me'));
 
         // Broadcast when a user connects
         socket.broadcast.to(user.room).emit('message',
